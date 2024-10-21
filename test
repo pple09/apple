@@ -24,7 +24,20 @@ class Player(FirstPersonController):
               
          )
 
+class Warp(Entity):
+    def __init__(self,i, j):
+        super().__init__(
+            warp = Entity(
+                model = 'cube',
+                scale = (5, 5, 5),
+                position = (i * 5, 1, j * 5),
+                collider = 'box'
 
+
+            )
+
+
+        )
 
 def input(Key):
      if Key == 'escape':
@@ -166,6 +179,15 @@ for i in range( len(MAP) ):
                 if MAP[i][j] == 'e':
                     exitdoor = Exit(i,j)
                     continue
+
+
+                if MAP[i][j] == 'w':
+                    warp = Warp(i, j)
+                    continue
+
+
+
+
 
                 Wall = Entity(
                     model = 'cube',
