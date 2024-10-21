@@ -46,7 +46,15 @@ def input(Key):
 
 
 
+        self.a = player
 
+        def update(self):
+            self.abcd()
+
+
+        def abcd(self):
+            if self.warp.intersects(a):
+                self.a.position = (95, 3, 90)
 
 
 
